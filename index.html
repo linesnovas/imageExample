@@ -21,13 +21,12 @@
 
 <script>
  	$(document).ready(function(){
-		alert("jQueryファイルの読み込み完了でーす。");
 
 		$.get("https://us-central1-fx-project-166711.cloudfunctions.net/function-1 ")
 		.done(function( data ) {
 			$('#main').html( data ).html();
 		});
-		$('body').html('<h1>こんにちは！</h1>');
+		$('#main').html('<h1>ちょっと待ってね</h1>');
 
 	});
 
