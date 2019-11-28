@@ -12,6 +12,7 @@
 
 <body>
 <main>
+  <input type="text" id="key" name="key" value=""/>
   <div id="main" >
 
 
@@ -22,7 +23,9 @@
 <script>
  	$(document).ready(function(){
 
-		$.get("https://us-central1-fx-project-166711.cloudfunctions.net/function-1 ")
+ 		key = $('#key').val("flower");
+
+		$.get("https://us-central1-fx-project-166711.cloudfunctions.net/function-1?key="+key)
 		.done(function( data ) {
 			$('#main').html( data ).html();
 		});
@@ -37,4 +40,8 @@
 </script>
 </body>
 </html>
+
+
+
+
 
