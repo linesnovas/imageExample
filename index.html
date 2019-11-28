@@ -31,7 +31,11 @@
 
 
 	function search(){
-		key = $('#key').val("flower");
+		key = $('#key').val();
+
+		if(key == ""){
+			key = "flower"
+		}
 
 		$.get("https://us-central1-fx-project-166711.cloudfunctions.net/function-1?key="+key)
 		.done(function( data ) {
