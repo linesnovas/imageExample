@@ -12,10 +12,10 @@
 
 <body>
 <main>
-  <form id="imageform" method="" action="">
+  
   	<input type="text" id="key" name="key" value=""/>
-  	<button id="election" type="submit"> 英語しか検索できないよ</button>
-  </form>
+  	<button id="election" > 英語しか検索できないよ</button>
+  
   <div id="main" >
 
 
@@ -49,10 +49,15 @@
 		search();
 	})
 
-     $('#imageform').submit(function(){
-     	search();
-     	return false;
-	 })
+     $( '#key' ).keypress( function ( e ) {
+	  	if ( e.which == 13 ) {
+		  	// ここに処理を書く
+		  	search();
+			// スマホのキーボードを閉じる
+	  		$("#key").blur();
+	   		return false;
+		}
+	})
     
  
     
